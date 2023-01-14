@@ -1,0 +1,499 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #f9004d;
+    --secondary-color : #e0040b;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
+}
+nav h4{
+    font-size: 50px;
+    font-weight: 700;
+    color: #ff004f;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+nav h4 span{
+    color: white;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin: 10%;
+    font-size: 50px;
+}
+.header-text h1{
+    font-size: 70px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+.header-text h2{
+    font-size: 2.2rem;
+    font-weight: 400x;
+    color: #8e8e8e;
+}
+/* -------------About------------ */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col1{
+    flex-basis: 35%;
+}
+.about-col1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* --------------Experience----------- */
+#Experience{
+    padding: 30px 0;
+}
+.experience-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.experience-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.experience-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.experience-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.experience-list div h3{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.experience-list div p{
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.experience-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.experience-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+/* ---------------Projects---------------- */
+#Projects{
+    padding: 30px 0;
+}
+#Projects h1{
+    font-size: 65px;
+    font-weight: 700;
+}
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 20px;
+}
+.project{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.project h2{
+    color: #ff004f;
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.project h3{
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.project p{
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+.weblink{
+    align-items: center;
+    padding: 10px 5px;
+    text-decoration: none;
+    display: flex;
+    font-size: 30px;
+    font-weight: 500;
+}
+.weblink a{
+    padding: 0px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+.weblink a span{
+    margin-top: 10px;
+    background: #ff004f;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    border-right: 20px;
+    border-radius: 10px;
+}
+/* ------------------contact--------------- */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+    font-size: 20px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.contact-right{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons a{
+    padding: 20px 8px;
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translate(-5px);
+}
+.btn{
+    display: inline-block;
+    background: #ff004f;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 530;
+    border-right: 20px;
+    margin-top: 30px;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: red;
+}
+/* ------------------css samll screen--------------- */
+nav .menu{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #header, .container{
+        background-image: url("cceedv");
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 25px;
+    }
+    .header-text h1{
+        font-size: 29px;
+    }
+    .header-text h2{
+        margin-top: 15px;
+        font-size: 15px;
+    }
+    nav .menu{
+        display: block;
+        font-size: 30px;
+        margin-right: 30px;
+        margin-top: 30px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .menu{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col1, .about-col2{
+        flex-basis: 80%;
+    }
+    .about-col1{
+        margin-bottom: 30px;
+    }
+    .about-col2{
+        font-size: 10px;
+        
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+    .project h2{
+        color: #ff004f;
+        font-size: 50px;
+        font-weight: 600;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    .project h3{
+        font-size: 25px;
+        font-weight: 500;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    .project p{
+        font-size: 15px;
+        font-weight: 300;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 25px;
+    }
+    .weblink{
+        align-items: center;
+        padding: 10px 5px;
+        text-decoration: none;
+        display: flex;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .project2{
+        align-items: center;
+        padding: 10px 5px;
+        text-decoration: none;
+        display: flex;
+        font-size: 13.5px;
+        font-weight: 500;
+    }
+    .weblink a{
+        padding: 0px 30px;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .weblink a span{
+        margin-top: 10px;
+        background: #ff004f;
+        color: #fff;
+        padding: 10px;
+        font-size: 13px;
+        font-weight: 500;
+        border-right: 20px;
+        border-radius: 10px;
+    }
+    .contact-left p{
+        margin-top: 30px;
+        font-size: 17px;
+    }
+    .copyright{
+        font-size: 12px;
+    }
+}
+#message{
+    color: #61b752;
+    margin-top: 10px;
+    display: block;
+}
+/* --------------------Zeliot-------------------- */
+.zeliot-container h4{
+    font-size: 70px;
+    font-weight: 700;
+    color: #ff004f;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.zeliot-container h4 span{
+    color: white;
+}
+.zeliot-container h1{
+    font-size: 50px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #ff004f;
+}
+.zeliot-container h2{
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #FF00FF;
+    opacity: 50%;
+}
+.zeliot-container p{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-left: 20px;
+    line-height: 30px;
+    color: #f5f5f5;
+}
