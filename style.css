@@ -371,7 +371,7 @@ nav .menu{
     }
     nav ul .menu{
         position: absolute;
-        top: 25px;
+        top: 10px;
         left: 25px;
         cursor: pointer;
     }
